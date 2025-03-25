@@ -1,0 +1,282 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b0614;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #0b0614;
+    padding: 15px 0;
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(231, 149, 8);
+}
+
+.dot {
+    color: #a855f7;
+}
+
+/* Navigation Menu */
+.nav__menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    border: 1px solid white ;
+    border-radius: 60px;
+    padding-inline: 40px;
+    padding-block: 20px;
+}
+
+.nav__menu li {
+    display: inline-block;
+}
+
+.nav__menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav__menu li a:hover {
+    color: #a855f7;
+}
+
+/* Header Actions */
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contact Button */
+.contact-button {
+    border: 1px solid white;
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-button i {
+    font-size: 14px;
+}
+
+.contact-button:hover {
+    background: white;
+    color: #0b0614;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Hamburger Menu (Hidden on Large Screens) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #ffffff;
+    color: #0b0614;
+}
+
+.dark-mode .header {
+    background: #ffffff;
+}
+
+.dark-mode .nav__menu li a {
+    color: #0b0614;
+}
+
+.dark-mode .contact-button {
+    border: 1px solid #0b0614;
+    color: #0b0614;
+}
+
+.dark-mode .contact-button:hover {
+    background: #0b0614;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav__menu {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 0 15px;
+    }
+
+    .nav__menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(233, 232, 236, 0.95);
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .nav__menu.open {
+        display: flex;
+
+    }
+
+    .nav__menu li {
+        align-self: stretch;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .contact-button {
+        display: none;
+    }
+    .resume-contact-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.greeting {
+    padding-block: 20px;
+    font-family: "Winky Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    word-spacing: 5px;
+}
+
+.developer-info {
+    font-family: "Winky Sans", sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    color: #a855f7;
+    text-align: center;
+    
+    
+}
+
+.short-description {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: #d1d5db;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-contact-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.contact-about {
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+
+    border-radius: 16px;
+    padding: 10px 30px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.resume-button {
+    background-color: #ff8c00;
+    border-radius: 16px;
+    padding: 10px 30px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.contact-about:hover, .resume-button:hover {
+    background-color: #e07b00;
+}
+
+.resume-button a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
