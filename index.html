@@ -19,11 +19,10 @@
     
                 <!-- Navbar -->
                 <ul class="nav__menu" id="navMenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">My Work</a></li>
-                    <li><a href="#">Contact me</a></li>
+                    <li><a href="#portfolio">Home</a></li>
+                    <li><a href="#aboutMe">About me</a></li>
+                    <li><a href="#myWork">My Work</a></li>
+                    <li><a href="#contact">Contact me</a></li>
                 </ul>
     
                 <!-- Actions -->
@@ -41,7 +40,7 @@
             </nav>
         </header>
         <!-- About section -->
-        <div class="about-section">
+        <div class="about-section" id="portfolio">
             <div class="profile-photo">
                 <img src="images/profilepic.png" alt="Profile Photo" >
             </div>
@@ -55,7 +54,7 @@
                 Final-year BTech IT student passionate about web development, skilled in frontend technologies, and eager to contribute to innovative projects.
             </div>
             <div class="resume-contact-buttons">
-                <button class="contact-about">Contact</button>
+                <button class="contact-about">Contact <span><i class="fa-solid fa-arrow-right-to-bracket" style="color: #ffffff;"></i></span></button>
                 <button class="resume-button">
                     <a href="Resume/Kishore-babu.pdf" download="Resume/Kishore-babu.pdf">Resume <span class="material-symbols-outlined">
                         download
@@ -65,7 +64,7 @@
         </div>
 
         <!-- About Me -->
-        <div class="aboutMe-section">
+        <div class="aboutMe-section" id="aboutMe">
             <div class="section-intro">Introduction</div>
             <div class="section-title">About Me</div>
             <div class="about-content">
@@ -114,6 +113,69 @@
         </div>
         
     </div>
+    <!-- My Work -->
+    <div class="projects-section" id="myWork">
+        <div class="section-intro">My Portfolio</div>
+        <div class="section-title">My Latest Work</div>
+        <div class="projectDesc"><p>Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.</p></div>
+        <div class="projects case">
+            <div class="project expo" style="background-image: url('./images/todolist.png'); background-size: cover;background-position: center; background-repeat: no-repeat;"  >
+                    <div class="link">
+                        <div class="projectDetails">
+                            <div class="projectTittle">Todo List Project</div>
+                            <div class="domain">Javascript</div>
+                        </div>
+                        <div class="source"><a href="https://github.com/kishorebabulavuri/-Todo-list"><i class="fa-solid fa-location-arrow"></i></a></div>
+
+                    </div>
+            </div>
+            <div class="project expo" style="background-image: url('./images/Notes.png'); background-size: cover;background-position: center; background-repeat: no-repeat;"  >
+                    <div class="link">
+                        <div class="projectDetails">
+                            <div class="projectTittle">course Manage Project</div>
+                            <div class="domain">web design & sql</div>
+                        </div>
+                        <div class="source"><a href="https://github.com/kishorebabulavuri/-Todo-list"><i class="fa-solid fa-location-arrow"></i></a></div>
+
+                    </div>
+            </div>
+            <div class="project expo" style="background-image: url('./images/ytClone.png'); background-size: cover;background-position: center; background-repeat: no-repeat;"  >
+                    <div class="link">
+                        <div class="projectDetails">
+                            <div class="projectTittle">Youtube clone Project</div>
+                            <div class="domain">React JS</div>
+                        </div>
+                        <div class="source"><i class="fa-solid fa-location-arrow"></i></div>
+
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="showMore">
+            <button>Show More <span><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></span></button>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <section class="contact-section" id="contact">
+        <h3>Connect with me</h3>
+        <h1>Get in touch</h1>
+        <p>I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
+
+        <form action="#" method="POST" class="contact-form">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <textarea name="message" placeholder="Enter your message" required></textarea>
+
+            <!-- hCaptcha -->
+            <div class="h-captcha" data-sitekey="your-hcaptcha-site-key"></div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
     
 <script src="app.js"></script>
 </body>

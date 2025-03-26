@@ -143,51 +143,6 @@ body {
     color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .nav__menu {
-        gap: 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav {
-        padding: 0 15px;
-    }
-
-    .nav__menu {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: rgba(233, 232, 236, 0.95);
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        padding: 20px 0;
-        display: none;
-    }
-
-    .nav__menu.open {
-        display: flex;
-
-    }
-
-    .nav__menu li {
-        align-self: stretch;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .contact-button {
-        display: none;
-    }
-    .resume-contact-buttons{
-        display: flex;
-        flex-direction: column;
-    }
-}
 
 
 
@@ -284,7 +239,7 @@ body {
 .aboutMe-section{
     display: flex;
     flex-direction: column;
-    margin: 90px;
+    margin: 10px;
     align-items: center;
 }
 .section-title{
@@ -338,6 +293,7 @@ body {
     border-radius: 10px;
     font-family: 'Winky Sans',sans-serif;
 }
+
 .lang-wrap{
     margin: 50px;
     display: flex;
@@ -389,3 +345,317 @@ body {
 
 
 
+/* Responsive Design - Keeping Your Exact Style */
+@media (max-width: 1024px) {
+    .nav__menu {
+        gap: 25px;
+        padding-inline: 30px;
+    }
+    .developer-info {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 0 15px;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: #0b0614;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        border: 1px solid white;
+        border-radius: 20px;
+        width: auto;
+    }
+
+    .nav__menu.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header__actions .contact-button {
+        display: none;
+    }
+
+    .resume-contact-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 20px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .learning-journey {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .languages {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__menu {
+        right: 10px;
+        padding: 15px;
+    }
+
+    .developer-info {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .greeting {
+        font-size: 26px;
+    }
+
+    .profile-image {
+        height: 300px;
+    }
+
+    .resume-button, 
+    .contact-about {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .tools ul {
+        justify-content: center;
+    }
+
+    .aboutMe-section {
+        margin: 60px 20px;
+    }
+}
+
+
+
+/* Projects Section */
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section-title{
+    font-family: 'Winky Sans', sans-serif;
+    font-size: xx-large;
+}
+
+/* Case Container */
+.case {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;  /* Ensures responsiveness */
+    margin-top: 30px;
+}
+
+/* Project Box */
+.expo {
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    background-color: #ece0d1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid white;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Background Image */
+.expo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hover Effect */
+.expo:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Link Section */
+.link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d1d5db;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    border-radius: 20px;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+/* Project Title */
+.projectTittle {
+    font-family: 'Winky Sans', sans-serif;
+    color: #0b0614;
+    font-weight: bolder;
+}
+
+/* Project Domain */
+.domain {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    opacity: 0.7;
+    color: #1b1b1a;
+}
+
+/* Source Icon */
+.source {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ece0d1;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effect on Source */
+.source:hover {
+    background-color: #d1d5db;
+    transform: scale(1.1);
+}
+
+.showMore{
+    margin-top: 90px;
+    align-items: center;
+}
+
+.showMore button{
+    padding-inline: 40px;
+    padding-block: 10px;
+    background-color: #a855f7;
+    border-radius: 16px;
+    border: 1px solid white;
+    text-align: center;
+    font-family: 'Winky Sans', sans-serif;
+    font-size: large;
+    cursor: pointer;
+}
+
+.showMore{
+    font-family: 'Winky Sans', sans-serif;
+    font-size: large;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expo {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .link {
+        width: 90%;
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    color: #ff0000;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.h-captcha {
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background-color: #6200ea;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #5200c4;
+}
